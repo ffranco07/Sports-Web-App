@@ -1,4 +1,4 @@
-# SportsWebApp
+# sports-web-app
 
 ## Requirements
 

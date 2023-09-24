@@ -1,0 +1,821 @@
+/* Assign full width inputs*/
+input[type=text],
+input[type=password] {
+    width: 20%;
+    padding: 12px 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.search {
+    position: relative;
+}
+
+.search i {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    color: gray;
+}
+
+.ui-menubar {
+    border: none !important;
+}
+
+.ui-menubar .ui-menuitem-text {
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.theme-light {
+    --main-background: #ffffff;
+    --header-footer-color: #000000;
+    --header-footer-bg-color: #d9d9d9;
+    --header-footer-bg-color2: #a6a6a6;
+    --menubar-background: #878787;
+    --menubar-color: #000000;
+    --active-menu-color: #cccccc;
+}
+
+.theme-dark {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #6f6f88;
+    --header-footer-bg-color2: #3b3b48;
+    --menubar-background: #525262;
+    --menubar-color: #f5f5f5;
+    --active-menu-color: #919191;
+}
+
+.theme-Turquoise {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #6cc7cf;
+    --header-footer-bg-color2: #03767e;
+    --menubar-background: #2ab1be;
+    --menubar-color: #f5f5f5;
+    --active-menu-color: #ffffff;
+}
+
+.theme-green {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #73dfae;
+    --header-footer-bg-color2: #1e8455;
+    --menubar-background: #32b67a;
+    --menubar-color: #135436;
+    --active-menu-color: #b3eed3;
+}
+
+.theme-blue {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #2d5394;
+    --header-footer-bg-color2: #2d5394;
+    --menubar-background: #839de2;
+    --menubar-color: #f5f5f5;
+    --active-menu-color: #ffffff;
+}
+
+.theme-rose {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #79425a;
+    --header-footer-bg-color2: #79425a;
+    --menubar-background: #935b74;
+    --menubar-color: #f5f5f5;
+    --active-menu-color: #ffffff;
+}
+
+.theme-teal {
+    --main-background: #f5f5f5;
+    --header-footer-color: #ffffff;
+    --header-footer-bg-color: #427976;
+    --header-footer-bg-color2: #427976;
+    --menubar-background: #599592;
+    --menubar-color: #f5f5f5;
+    --active-menu-color: #003331;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.ng-main {
+    background-color: var(--main-background);
+    height: 100%;
+}
+
+.layout-topbar {
+    background-color: var(--surface-a);
+    padding: 0;
+    height: 70px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid var(--surface-d);
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    margin-left: 250px;
+}
+
+.topbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+}
+
+.topbar-submenu {
+    position: absolute;
+    transform-origin: top;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+    width: 275px;
+    max-height: 400px;
+    background-color: var(--surface-f);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    overflow: auto;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 3px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ng-header, .ng-footer {
+    height: 100px;
+    padding: 5px;
+    background-image: -webkit-gradient(linear, left top, right top, from(var(--main-background)), to(var(--main-background)));
+    color: var(--header-footer-color);
+}
+
+.ng-header .firstHeaderRow {
+    background-color: var(--background);
+    background-image: none;
+    height: 54px;
+    padding: 8px 0;
+}
+
+.ng-header .firstHeaderContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding: 0 16px;
+    line-height: normal;
+}
+
+.ng-header .mainLogoContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+
+.ng-header .headerButtonsContainer {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin-left: 0;
+}
+
+.headerButtonsContainer .notLoggedInContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.headerButtonsContainer .loginRegContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.ng-header-right {
+    height: 100px;
+}
+
+.ng-header a {
+    color: var(--header-footer-color);
+}
+
+.ng-header a:hover {
+    color: var(--header-footer-color);
+}
+
+.ng-header .pi {
+    color: #000000;
+}
+
+.ng-header .secondHeaderRow {
+    display: block;
+    text-align: center;
+    background-color: white;
+}
+
+.secondHeaderRow .secondHeaderContainer {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.secondHeaderContainer .mainSearchMenuBarContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    padding: 5px 0px;
+}
+
+.mainSearchMenuBarContainer .menuBarContainer {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.menuBarContainer .subMenuBarContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.ng-header .dropdown {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+
+.ng-footer div {
+    text-align: center;
+    padding: 10px;
+}
+
+.ng-content {
+    background-color: white;
+    overflow: auto;
+    height: 100%;
+    padding: 10px;
+    padding-left: 240px;
+}
+
+.hidden-menu-content {
+    padding-left: 10px;
+}
+
+.ng-content .ui-card {
+    min-height: 100%;
+    background: #f7f9fa;
+}
+
+.icon {
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prime-button {
+    width: 150px !important;
+}
+
+.overview-box-1 .ui-card-body {
+    background-color: #F39611;
+}
+
+.overview-box-2 .ui-card-body {
+    background-color: #326DDF;
+}
+
+.overview-box-3 .ui-card-body {
+    background-color: #E02364;
+}
+
+.overview-box-4 .ui-card-body {
+    background-color: #7DC931;
+}
+
+.color-red {
+    color: red;
+}
+
+.header-breadcrumb {
+    margin-bottom: 10px;
+}
+
+.login-panel, .user-regisration {
+    height: 100%;
+    background-image: radial-gradient(var(--header-footer-bg-color) 40%, var(--header-footer-bg-color2));
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.login-logo {
+    height: 100%;
+    width: 100%;
+}
+
+.toggle-menu-button {
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    background-color: var(--menubar-background);
+}
+
+.toggle-menu-button .icon {
+    padding: 0;
+    color: var(--menubar-color) !important;
+}
+
+.logo-large {
+    display: block;
+    height: 50px;
+    width: 180px;
+}
+
+.logo-small {
+    display: none;
+}
+
+.user-name {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.notification-message {
+    min-height: 25px;
+    width: 200px;
+    padding: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.np-loader {
+    position: fixed;
+    z-index: 1100;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.np-loader:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fa-fw {
+    width: 100px;
+}
+
+.right {
+    float: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.np-sidebar {
+    box-shadow: none !important;
+    background-color: #white !important;
+    height: 100%;
+    overflow: auto;
+    border: none !important;
+    padding: 5px !important;
+    margin-top: 105px;
+    width: 250px;
+}
+
+.np-sub-menu {
+    padding-left: 7px;
+    width: 100%;
+    list-style: none;
+}
+
+.np-menu {
+    font-size: 16px;
+    padding: 5px;
+    margin: 0px;
+    list-style: none;
+}
+
+.np-menu li a {
+    padding: 7px;
+    color: var(--menubar-color);
+    display: block;
+    text-decoration: none !important;
+    position: relative;
+}
+
+.np-menu li a:hover, .np-menu .active {
+    color: var(--active-menu-color);
+    cursor: pointer;
+}
+
+.np-menu .fa {
+    width: 20px;
+    text-align: center;
+}
+
+.np-menu li ul {
+    display: block;
+}
+
+.np-menu li ul::before {
+    content: "";
+    display: block;
+    z-index: 1;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--menubar-color);
+}
+
+a {
+    cursor: pointer;
+}
+
+.extra-page-footer {
+    position: relative;
+    bottom: 0px;
+    padding: 10px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+    color: black;
+}
+
+.ui-messages ul {
+    display: inline-block !important;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px or more) */
+
+@media only screen and (min-width: 1200px) {}
+
+/* Large devices (laptops/desktops, 1200px or less) */
+
+@media only screen and (max-width: 1200px) {}
+
+/* Medium devices (landscape tablets, 992px or less) */
+
+@media only screen and (max-width: 992px) {
+    .logo-large {
+        display: none;
+    }
+
+    .logo-small {
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .user-name {
+        display: none;
+    }
+
+    .ng-content {
+        padding-left: 10px;
+    }
+
+    .ng-header-left {
+        width: 100px;
+    }
+}
+
+.error-box {
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+    overflow: auto;
+    color: var(--header-footer-bg-color2)
+}
+
+.eventList {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.eventCard {
+    background-color: lightgrey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.eventCard .eventContainer {
+    font-size: 1.4rem;
+}
+
+.eventCard .eventContainer a {
+    color: var(--foreground);
+    position: relative;
+}
+
+.fillPrimary {
+    fill: var(--primary);
+}
+
+.groupedMarketTemplate {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.groupedMarketTemplate .header {
+    grid-row: 1;
+    margin-bottom: -8px;
+}
+
+.groupedMarketTemplate .marketTemplateTitleContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.groupedMarketTemplate .marketTemplateTitle {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--links_odds);
+}
+
+.groupedMarketTemplate .marketTemplateTitleArrow {
+    margin: 4px 0 0 8px;
+}
+
+.groupedMarketTemplate .selectionHeader {
+    text-align: center;
+    color: var(--foreground);
+    font-size: 1.1rem;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+element.style {
+    grid-row: 3 / auto;
+    grid-row-start: 3;
+    grid-row-end: auto;
+}
+
+.truncate2Rows {
+    -webkit-line-clamp: 2;
+}
+
+.truncate3Rows {
+    -webkit-line-clamp: 3;
+}
+
+.truncate2Rows, .truncate3Rows {
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-word;
+    -webkit-box-orient: vertical;
+}
+
+.groupedMarketTemplate .groupedMarketTemplateGrid {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 32px;
+    grid-auto-rows: 50px;
+    grid-gap: 8px;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.groupedMarketTemplate .groupedMarketTemplateGrid .col2 {
+    grid-column: 2;
+}
+
+.groupedMarketTemplate .groupedMarketTemplateGrid .col3 {
+    grid-column: 3;
+}
+
+.groupedMarketTemplate .groupedMarketTemplateGrid .col4 {
+    grid-column: 4;
+}
+
+.groupedMarketTemplate .groupedMarketTemplateGrid.groupedMarketTemplateGrid_3Col {
+    grid-template-columns: 1fr repeat(3, 120px);
+}
+
+.groupedMarketTemplateGrid.groupedMarketTemplateGrid_3Col.groupedMarketTemplateGrid_football {}
+
+.groupedMarketTemplateGrid.groupedMarketTemplateGrid_football.groupedMarketTemplateGrid_3Col {}
+
+.dateContainer {
+    padding-left: 0;
+}
+
+.dateContainer {
+    font-size: 1.1rem;
+}
+
+.dateContainer .date {
+    color: var(--infoText);
+    text-transform: uppercase;
+}
+
+.competitor {
+    grid-column: 1;
+    align-self: stretch;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    margin-bottom: -4px;
+    margin-top: -4px;
+    color: var(--foreground);
+}
+
+.competitor .maxIOSHeight {
+    max-height: 38px;
+}
+
+.competitor .teamLabel {
+    font-size: 1.1rem;
+    font-weight: 200;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    line-height: 1.4rem;
+    color: var(--foreground);
+}
+
+.competitor.firstCompetitor {
+    margin-top: 0;
+}
+
+.competitor.lastCompetitor {
+    margin-bottom: 0;
+    border-bottom-width: 2px;
+}
+
+.competitor .eventInfo {
+    height: 100%;
+    width: 100%;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.teamLogo, .teamLogo svg {
+    height: 22px;
+    width: 22px;
+}
+
+.groupedMarketTemplate .competitor .teamNameSection {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.groupedMarketTemplate .competitor .teamNameSection .teamNameContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+}
+
+.groupedMarketTemplate .competitor .teamNameSection .teamNameContainer .teamLabel {
+    font-weight: 600;
+    color: var(--foreground);
+    text-transform: capitalize;
+    padding-right: 4px;
+}
+
+.selectionOption {
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    padding: 2px;
+    background-color: white;
+    border: 1px solid var(--primaryStroke);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .06);
+    font-size: 1.2rem;
+    line-height: 1em;
+    vertical-align: top;
+    font-weight: 400;
+    text-transform: capitalize;
+    width: 100%;
+    height: 50px;
+}
+
+.selectionOption, .selectionOption .oddsView {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.selectionOption .handicap {
+    margin-bottom: .2rem;
+    color: var(--foreground);
+}
+
+.selectionOption .truncateText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.selectionOption .odds {
+    color: var(--links_odds);
+}
+
+/* Small devices (portrait tablets and large phones, 768px or less) */
+
+@media only screen and (max-width: 768px) {}
+
+/* Extra small devices (phones, 600px or less) */
+
+@media only screen and (max-width: 600px) {}

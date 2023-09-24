@@ -1,0 +1,23 @@
+<app-header-breadcrumb></app-header-breadcrumb>
+<p-panel header="Event List">
+    <p-table [value]="events">
+        <ng-template pTemplate="header">
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{col.header}}
+                </th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-event>
+            <tr>
+                <td *ngFor="let col of columns">
+                    {{event[col.field]}}
+                </td>
+                <td>
+                    <a (click)="goToEventDetails(event.Id)">Details</a>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</p-panel>

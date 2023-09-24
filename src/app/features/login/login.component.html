@@ -1,0 +1,52 @@
+<div class="login-panel">
+  <div class="language-menu">
+    <select (change)="onLanguageChange($event)">
+      <option value="en" [selected]="locale == 'en'">English</option>
+      <option value="hi" [selected]="locale == 'hi'">Hindi</option>
+    </select>
+  </div>
+  <div class="p-grid p-nogutter p-justify-center p-align-center" style="height:100%">
+    <div class="p-xl-3 p-lg-6 p-md-8 p-sm-10">
+      <p-panel header="{{ 'LoginTitle' | translate}}">
+        <div class="p-col-12">
+          <p-messages [(value)]="msgs"></p-messages>
+        </div>
+        <div class="p-grid p-justify-center p-align-center">
+          <div class="p-xl-6 p-lg-6 p-md-8 p-sm-10">
+          </div>
+          <div class="p-col-12">
+            <div class="ui-inputgroup">
+              <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+              <input id="input-playername" type="text" size="30" pInputText [(ngModel)]="playerName"
+                placeholder="Enter Player name">
+            </div>
+          </div>
+          <div class="p-col-12">
+            <div class="ui-inputgroup">
+              <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
+              <input id="input-password" type="password" size="30" pInputText [(ngModel)]="password"
+                placeholder="Enter Password">
+            </div>
+          </div>
+          <div class="p-col-12 text-center">
+            <a>Forgot Password?</a>
+          </div>
+        </div>
+        <div class="p-grid">
+          <div class="p-col-6">
+            <button pButton type="button" label="{{ 'Login' | translate}}" class="ui-button-raised"
+              (click)="onClickLogin()"></button>
+          </div>
+          <div class="p-col-6">
+            <button pButton type="button" label="{{ 'Register' | translate}}" class="ui-button-raised"
+              [routerLink]="['/register']"></button>
+          </div>
+        </div>
+      </p-panel>
+      <div class="extra-page-footer">
+        <div>Powered by Game-Tec Labs 2021</div>
+        <div>Version : {{version}}</div>
+      </div>
+    </div>
+  </div>
+</div>

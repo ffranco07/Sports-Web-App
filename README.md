@@ -1,11 +1,11 @@
 # SportsWebApp
 
-# Getting Started
-
 ## Requirements
 
   * NodeJS
   * NodeJS Package Manager (NPM)
+
+## Getting Started
 
 1. `git clone` or copy files to an empty project folder.
 
